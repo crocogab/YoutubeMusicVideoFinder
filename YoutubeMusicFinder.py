@@ -22,7 +22,8 @@ parser.add_option('-u', '--url',
                         help='The url of the target Youtube vidéo')
 (url, args) = parser.parse_args()
 if not url.URL:   
-    parser.error('You should enter a URL')
+    parser.error('You have to enter a URL')
+url=url.URL
 
 video1=video.Video(url)
 video1.clean_workspace()
