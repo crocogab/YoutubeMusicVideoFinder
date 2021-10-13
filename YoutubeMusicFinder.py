@@ -51,19 +51,19 @@ liste_musique = []
 for i in entries:
   try: 
       nom=find_song(f'{audio_directory}/{i}')
-      print(f'Traitement en cours de {i}')
+      print(f'Processing {i}')
       liste_musique.append(nom)
 
   except KeyError:
-      print(f'Traitement en cours de {i}')
+      print(f'Processing {i}')
     
     
     
 
 liste_finale=list(set(liste_musique))
 if len(liste_finale)==0:
-    liste_finale.append('Aucune musique trouvée dans cette vidéo')
+    liste_finale.append('No music found in this video')
 for i in liste_finale:
-  print(f'Musique trouvée : {i}')
+  print(f'Music found : {i}')
 
 

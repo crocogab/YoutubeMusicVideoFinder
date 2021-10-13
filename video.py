@@ -15,7 +15,7 @@ class Video:
         realpath=file_path[0:len(file_path)-8]
         realpath=realpath.replace("\\",'/')
         video = pafy.new(self.url)
-        print(f'Téléchargement en cours de {video.title} de {video.author} | {video.duration} \n')
+        print(f'Downloading {video.title} from {video.author} | {video.duration} \n')
         bestaudio = video.getbestaudio()
         bestaudio.download(f"{realpath}audio.mp3")
         

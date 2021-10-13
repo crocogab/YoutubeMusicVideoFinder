@@ -30,7 +30,7 @@ class Audio:
            if  os.path.isdir(f'{audio_directory}/{i}')==True:
                pass
            else:
-             print(f'{i} traitement en cours | Output : /extract/ \n')
+             print(f'{i} processing | Output : /extract/ \n')
              song=AudioSegment.from_file(f'{audio_directory}/{i}')
              first_5_seconds=song[:5000]
              last_5_seconds = song[-5000:]
@@ -38,7 +38,7 @@ class Audio:
              first_5_seconds.export(f"{audio_directory}/extract/first_{i}", format="mp3")
     
     def clean_workspace(self):
-        print("Nettoyage de l'espace de travail en cours afin d'éviter tout bug :)")
+        print("Cleaning of the workspace in progress to avoid any bugs :)")
         file_path = self.path
         realpath=file_path[0:len(file_path)-9]
         realpath=realpath.replace("\\",'/')
