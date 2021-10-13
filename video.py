@@ -11,13 +11,17 @@ class Video:
         
     def mp3_download(self):
         """télécharge le fichier mp3 de la vidéo"""
-        video = pafy.new(self.url)
-        print(f'Téléchargement en cours de {video.title} de {video.author} | {video.duration}')
-        bestaudio = video.getbestaudio()
-        bestaudio.download("audio.mp3")
         file_path = os.path.realpath(__file__)
         realpath=file_path[0:len(file_path)-8]
         realpath=realpath.replace("\\",'/')
-        print(realpath)
+        if os.path.isfile(f"{realpath}audio.mp3"):
+            os.remove(f"{realpath}audio.mp3")
+        video = pafy.new(self.url)
+        print(f'Téléchargement en cours de {video.title} de {video.author} | {video.duration}')
+        bestaudio = video.getbestaudio()
+        bestaudio.download(f"{realpath}audio.mp3")
+        print(f"{realpath}audio.mp3")
+        
+        
         
         
