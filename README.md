@@ -45,7 +45,16 @@ as in the following example
 ```
 YoutubeMusicFinderFromFile.py -f FILE_PATH
 ```
+### Arguments
+You should use :
+- -f or --file on YoutubeMusicFinderFromFile file (used to precise url)
+- -u or --url on YoutubeMusicFinder file (used to file path)
+## Installation
+```
+pip install -r requirements.txt
+python YoutubeMusicFinder.py -u URL
 
+```
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=crocogab&theme=blue-green)](https://github.com/crocogab)
 
