@@ -34,7 +34,7 @@ As in the following example:
 ```
 YoutubeMusicFinder.py -u URL
 ```
-### YoutubeMusicFinderFromFime
+### YoutubeMusicFinderFromFile
 
 YoutubeMusicFinderFromFile is used to find the music of an audio.
 It is therefore necessary to give as argument the path of the file in mp3.
@@ -52,8 +52,7 @@ You should use :
 ## Installation
 ```
 pip install -r requirements.txt
-python YoutubeMusicFinder.py -u URL
-
+python YoutubeMusicFinder.py -u URL 
 ```
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=crocogab&theme=blue-green)](https://github.com/crocogab)
