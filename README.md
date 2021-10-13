@@ -17,7 +17,7 @@ What is YoutubeMusicFinder for?
 
 For example with this video: https://www.youtube.com/watch?v=QkJIheFSRVo
 
-```python
+```
 YoutubeMusicFinder.py -u https://www.youtube.com/watch?v=QkJIheFSRVo
 ...
 Music found : Army
@@ -31,7 +31,7 @@ Music found : Lonely Way
 YoutubeMusicFinder is used to find music from a youtube video. We must therefore give as argument the url of the video. 
 As in the following example:
 
-```python
+```
 YoutubeMusicFinder.py -u URL
 ```
 ### YoutubeMusicFinderFromFime
@@ -42,7 +42,7 @@ It is therefore necessary to give as argument the path of the file in mp3.
 > **Warning**: it is imperative that the file is called audio.mp3 and is located in the script folder
 as in the following example
 
-```python
+```
 YoutubeMusicFinderFromFile.py -f FILE_PATH
 ```
 
