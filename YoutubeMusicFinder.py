@@ -5,6 +5,9 @@ from pydub import AudioSegment
 import os
 import os.path
 from ShazamAPI import Shazam
+import sys
+import optparse
+from optparse import OptionParser
 
 actual_folder = os.path.realpath(__file__)
 actual_folder = actual_folder[0:len(actual_folder)-21]
@@ -13,7 +16,13 @@ actual_folder = actual_folder.replace("\\",'/')
 audio_final_full_dir=f'{actual_folder}audio_final'
 audio_directory=f'{audio_final_full_dir}/extract'
 
-url='https://www.youtube.com/watch?v=6ZpdIvsifV4'
+parser = OptionParser(usage='usage: %prog [options] arguments')
+parser.add_option('-u', '--url', 
+                        dest='URL',
+                        help='The url of the target Youtube vidéo')
+(url, args) = parser.parse_args()
+if not url.URL:   
+    parser.error('You should enter a URL')
 
 video1=video.Video(url)
 video1.clean_workspace()
