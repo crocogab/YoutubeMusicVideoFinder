@@ -22,13 +22,15 @@ def main():
     parser = OptionParser(usage='usage: %prog -f audio.mp3')
     parser.add_option('-f', '--file', 
                             dest='FILE',
-                            help='Your mp3 file | Your mp3 have to be in the YoutubeMusicFinder directory + have to be named audio.mp3')
+                            help='Your mp3 file ')
                             
     (options, args) = parser.parse_args()
     if not options.FILE:   
         parser.error('You have to give an mp3 file')
     file=options.FILE
-
+    song=AudioSegment.from_file(file)
+    song.export(f"{actual_folder}audio.mp3", format="mp3")
+    file=f"{actual_folder}audio.mp3"
 
     video1_audio=audio.Audio(f"{file}")
     video1_audio.clean_workspace()

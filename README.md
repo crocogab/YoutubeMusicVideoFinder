@@ -39,16 +39,14 @@ YoutubeMusicFinder.py -u URL
 YoutubeMusicFinderFromFile is used to find the music of an audio.
 It is therefore necessary to give as argument the path of the file in mp3.
 
-> **Warning**: it is imperative that the file is called audio.mp3 and is located in the script folder
-as in the following example
-
+> **Update**: You can now use YoutubeMusicFinderFromFile with a file located anywhere on your computer
 ```
 YoutubeMusicFinderFromFile.py -f FILE_PATH
 ```
 ### Arguments
 You should use :
-- -f or --file on YoutubeMusicFinderFromFile file (used to precise url)
-- -u or --url on YoutubeMusicFinder file (used to file path)
+- -f or --file on YoutubeMusicFinderFromFile file (used to precise file path)
+- -u or --url on YoutubeMusicFinder file (used to precise url)
 ## Installation
 ```
 cd YoutubeMusicFinder
