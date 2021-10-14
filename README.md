@@ -51,6 +51,7 @@ You should use :
 - -u or --url on YoutubeMusicFinder file (used to file path)
 ## Installation
 ```
+cd YoutubeMusicFinder
 pip install -r requirements.txt
 python YoutubeMusicFinder.py -u URL 
 ```
