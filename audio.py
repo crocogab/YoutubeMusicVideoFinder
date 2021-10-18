@@ -45,8 +45,9 @@ class Audio:
         
         dir1=f'{realpath}audio_final'
         dir2=f'{realpath}audio_final/extract/'
+        
         for f in os.listdir(dir1) :
-           if os.path.isfile(f):
+           if os.path.isfile(f'{dir1}/{f}'):
                os.remove(os.path.join(dir1, f))
            else:
                pass
