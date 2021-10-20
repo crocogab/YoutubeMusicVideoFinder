@@ -1,4 +1,5 @@
-pafy==0.5.5
+pytube==11.0.1
 pydub==0.25.1
 ShazamAPI==0.0.2
 youtube-dl==2021.6.6
+moviepy==1.0.3

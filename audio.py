@@ -1,8 +1,9 @@
-import pafy
 from pydub import AudioSegment
 import os
 import os.path
 from ShazamAPI import Shazam
+from moviepy.editor import *
+from pytube import YouTube
 
 
 

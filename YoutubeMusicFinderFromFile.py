@@ -1,6 +1,5 @@
 import video 
 import audio 
-import pafy
 from pydub import AudioSegment
 import os
 import os.path
@@ -8,6 +7,8 @@ from ShazamAPI import Shazam
 import sys
 import optparse
 from optparse import OptionParser
+from moviepy.editor import *
+from pytube import YouTube
 
 
 
