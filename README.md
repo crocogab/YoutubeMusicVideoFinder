@@ -48,8 +48,7 @@ You should use :
 - -f or --file on YoutubeMusicFinderFromFile file (used to precise file path)
 - -u or --url on YoutubeMusicFinder file (used to precise url)
 ## Installation
-> **WARNING**: ffmpeg must be installed on the computer
-Installation: https://www.ffmpeg.org/download.html
+> **WARNING**: ffmpeg must be installed on the computer | Installation: https://www.ffmpeg.org/download.html
 ```
 cd YoutubeMusicFinder
 pip install -r requirements.txt
