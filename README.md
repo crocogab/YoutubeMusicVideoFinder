@@ -13,7 +13,8 @@
 What is YoutubeMusicFinder for?
 
 - Recognize unknown music in a video
-- List all music from a youtube video / file and soon with timecode.
+- List all music from a youtube video / file with timecode.
+- YT / Spotify link (soon)
 
 For example with this video: https://www.youtube.com/watch?v=QkJIheFSRVo
 

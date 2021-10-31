@@ -10,6 +10,9 @@ from optparse import OptionParser
 from moviepy.editor import *
 from pytube import YouTube
 
+timecode=[]
+
+
 actual_folder = os.path.realpath(__file__)
 actual_folder = actual_folder[0:len(actual_folder)-21]
 actual_folder = actual_folder.replace("\\",'/')
@@ -35,36 +38,44 @@ video1_audio.clean_workspace()
 video1_audio.cut_mp3()
 video1_audio.cut_mp3_extrait(audio_final_full_dir)
 
-def find_song(file_path):
-    
+def find_song(file_path,time):
     mp3_file_content_to_recognize = open(file_path, 'rb').read()
     shazam = Shazam(mp3_file_content_to_recognize)
     recognize_generator = shazam.recognizeSong()
     reponse=next(recognize_generator)[1]
-    a=(reponse['track']['title'])
+    a={time+1:(reponse['track']['title'])}
     return(a)
 
 
 entries = os.listdir(audio_directory)
-liste_musique = []  
+liste_musique = {}  
 
 
-for i in entries:
+for i,j in enumerate(entries):
   try: 
-      nom=find_song(f'{audio_directory}/{i}')
-      print(f'Processing {i}')
-      liste_musique.append(nom)
+      nom=find_song(f'{audio_directory}/{j}',i)
+      print(f'Processing {j}')
+      liste_musique.update(nom)
 
   except KeyError:
-      print(f'Processing {i}')
+      print(f'Processing {j}')
     
     
     
 
-liste_finale=list(set(liste_musique))
-if len(liste_finale)==0:
-    liste_finale.append('No music found in this video')
-for i in liste_finale:
-  print(f'Music found : {i}')
+liste_finale={}
+for i in liste_musique:
+    if liste_musique[i] in liste_finale:
+        pass
+    else:
+        liste_finale[i]=liste_musique[i]
+
+temp = {val: key for key, val in liste_finale.items()}
+liste_finale = {val: key for key, val in temp.items()}
+
+if all(value == 0 for value in liste_finale.values()):
+    liste_finale={'No music found in this video':''}
+for key in liste_finale:
+    print(f'Timecode : {key} min | {liste_finale[key]}')
 
 
