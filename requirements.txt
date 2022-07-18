@@ -1,4 +1,4 @@
-pytube==11.0.1
+pytube
 pydub==0.25.1
 ShazamAPI==0.0.2
 youtube-dl==2021.6.6
